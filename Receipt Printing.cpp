@@ -18,8 +18,8 @@ double getTax(double subtotal) {
 
 // Creates and returns a string containing the subtotal, tax, and
 // final total for a purchases formatted as currency
-string getReceipt(string itemName, double subtotal, double tax) {
-    string r = itemName + "\n";
+string getReceipt(string itemName, int qty, double price, double subtotal, double tax) {
+    string r = itemName + ": " + to_string(qty) + " @ " + to_string(price).substr(0, to_string(price).find(".") + 3) + "\n";
     r += "Subtotal: $" + to_string(subtotal).substr(0, to_string(subtotal).find(".") + 3) + "\n";
     r += "Tax:      $" + to_string(tax).substr(0, to_string(tax).find(".") + 3) + "\n";
     r += "Total:    $" + to_string(subtotal+tax).substr(0, to_string(subtotal+tax).find(".") + 3) + "\n";
@@ -40,7 +40,6 @@ int main()
     // Display the receipt for the user's purchase.
     // You must use the 3 functions above to help you. Do not alter the functions.
 
-
-
+    
     system("pause");
 }
