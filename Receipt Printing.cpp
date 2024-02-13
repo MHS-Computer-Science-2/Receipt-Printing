@@ -26,10 +26,6 @@ string getReceipt(string itemName, int qty, double price, double subtotal, doubl
     return r;
 }
 
-int f(int x) {
-    return x * x - 2;
-}
-
 int main()
 {
     // Ask the user to enter:
